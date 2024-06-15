@@ -34,7 +34,7 @@ export default function Header({ sendDataToParent }: SendDataProps) {
                     ${isNavOpen ? "block" : "hidden lg:block"}
                 `}>
                         <div id='right-header'
-                            className='flex lg:flex-row flex-col items-center'>
+                            className='flex lg:flex-row flex-col items-center w-full'>
                             <div id='information'>
                                 <ul className='text-white flex lg:flex-row flex-col lg:[&_li]:mx-4 [&_li]:mb-5 lg:[&_li]:mb-0'>
                                     <li><a>Products</a></li>
@@ -43,9 +43,9 @@ export default function Header({ sendDataToParent }: SendDataProps) {
                                     <li><a>Pricing</a></li>
                                 </ul>
                             </div>
-                            <div id='btn' className='flex flex-row'>
-                                <button type="button" className='bg-tinyyellow rounded-sm px-5 py-3 text-sm text-brightblue'>Login</button>
-                                <button className='flex flex-row items-center text-white bg-tinyblue px-3 py-3 rounded-sm text-sm ml-3'>
+                            <div id='btn' className='flex lg:flex-row flex-col items-center w-full'>
+                                <button type="button" className='bg-tinyyellow rounded-sm px-5 py-3 text-sm text-brightblue mb-5 lg:mb-0'>Login</button>
+                                <button className='flex flex-row items-center text-white bg-tinyblue px-5 py-3 rounded-sm text-sm lg:ml-3 '>
                                     Try Whitepace free <img src={vector} className='ml-1'></img>
                                 </button>
                             </div>

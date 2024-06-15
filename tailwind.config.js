@@ -17,12 +17,19 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
+      backgroundImage: {
+        blue: "url('./src/assets/bgBlue.svg')",
+        white: "url('./src/assets/bgWhite.svg')",
+        yellow: "url('./src/assets/bgYellow.svg')",
+        sec1: "url('./src/assets/bgSec1.svg')",
+        blueshort: "url('./src/assets/bgBlueshort.svg')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

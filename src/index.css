@@ -80,3 +80,67 @@
 * > * {
   font-family: "Inter", sans-serif;
 }
+
+.underline-blue {
+  > span {
+    @apply inline-block relative;
+
+    span {
+      @apply relative z-10;
+    }
+
+    &:before {
+      @apply bg-[url('./assets/blueBar.svg')] lg:bg-[url('./assets/blueBar.svg')] md:bg-[url('./assets/blueBarShort.svg')] w-full h-full absolute left-0 -bottom-1 bg-contain bg-no-repeat bg-bottom content-[''] block;
+    }
+  }
+}
+
+.underline-yellow {
+  > span {
+    @apply inline-block relative;
+
+    span {
+      @apply relative z-10;
+    }
+
+    &:before {
+      @apply bg-[url('./assets/yellowBar.svg')] w-full h-full absolute left-0 -bottom-1 bg-contain bg-no-repeat bg-bottom content-[''] block;
+    }
+  }
+}
+
+.underline-yellow-2 {
+  @apply overflow-x-hidden py-2;
+
+  > span {
+    @apply inline-block relative;
+
+    span {
+      @apply relative z-10;
+    }
+
+    &:before {
+      @apply bg-[url('./assets/yellowMobileShort.svg')] xs:bg-[url('./assets/yellowBar.svg')] w-full h-full absolute 
+      -right-1/2 xs:right-auto xs:left-0 -bottom-1 bg-contain bg-no-repeat bg-bottom content-[''] block;
+    }
+  }
+}
+
+.plan-list {
+  @apply flex flex-col justify-center border-2 border-tinyyellow rounded-md p-6 
+  sm:min-w-[400px] min-w-[280px] w-1/3 grow-0 sm:whitespace-nowrap hover:scale-105
+  hover:shadow-2xl transition-all duration-300;
+}
+
+.client-list {
+  @apply flex flex-col justify-center rounded-md p-6 
+  sm:min-w-[400px] sm:max-w-[400px] min-w-[280px] w-1/3 grow-0 xs:shadow-2xl shadow-md
+  hover:shadow-2xl transition-all duration-300;
+}
+
+.content-section {
+  @apply grid 
+  grid-cols-1 lg:grid-cols-2  
+  px-3 sm:px-5 lg:px-7
+  py-16;
+}
