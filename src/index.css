@@ -144,3 +144,94 @@
   px-3 sm:px-5 lg:px-7
   py-16;
 }
+
+.box-content {
+  @apply grid lg:grid-cols-2;
+  &:nth-child(odd) {
+    .img {
+      @apply order-2;
+    }
+
+    .content {
+      @apply order-1;
+    }
+  }
+
+  &:nth-child(even) {
+    .img {
+      @apply order-1;
+    }
+
+    .content {
+      @apply order-2;
+    }
+  }
+
+  table {
+    th {
+      @apply hidden sm:table-cell;
+    }
+
+    td {
+      &:nth-child(1) {
+        &:before {
+          @apply content-['No.'] mr-2;
+        }
+      }
+
+      &:nth-child(2) {
+        &:before {
+          @apply content-['Name'] mr-2;
+        }
+      }
+    }
+  }
+}
+
+.link-content {
+  @apply absolute bottom-5 left-5 flex flex-row [&_a]:mr-5 text-white;
+}
+
+.btn-content {
+  &:after {
+    @apply absolute content-[''] 
+    bg-[url('https://www.santashome.com/static/version1718377898/frontend/Adyim/santas/th_TH/images/icon/arrow-link-white-short.svg')]
+    right-0 top-1/2 w-[21px] h-[13px];
+  }
+}
+
+.box-1 {
+  @apply lg:col-span-1 grid lg:grid-rows-2 bg-slate-200;
+}
+
+.box-2 {
+  @apply lg:col-span-2 grid lg:grid-rows-2;
+}
+
+.height-responsive {
+  @apply h-[200px] w-full lg:h-auto;
+}
+
+.swiper {
+  @apply relative w-full h-full my-20;
+}
+
+.swiper-slide {
+  @apply relative w-full flex items-center;
+
+  img {
+    @apply w-1/4 h-1/5 mx-auto object-cover;
+  }
+}
+
+.swiper-pagination {
+  @apply absolute grid grid-cols-2 w-auto h-full place-content-between;
+}
+
+.swiper-pagination-bullet {
+  @apply w-auto opacity-100 bg-transparent h-auto;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-transparent;
+}
